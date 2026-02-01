@@ -179,7 +179,11 @@ def main():
     if tester.failed_tests:
         print("\n❌ Failed Tests:")
         for failure in tester.failed_tests:
-            print(f"   - {failure['test']}: {failure.get('error', f\"Status {failure.get('actual')} (expected {failure.get('expected')})\"}")
+            if 'error' in failure:
+                error_msg = failure['error']
+            else:
+                error_msg = f"Status {failure.get('actual')} (expected {failure.get('expected')})"
+            print(f"   - {failure['test']}: {error_msg}")
     
     success_rate = (tester.tests_passed / tester.tests_run) * 100 if tester.tests_run > 0 else 0
     print(f"\n🎯 Success Rate: {success_rate:.1f}%")
