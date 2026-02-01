@@ -144,6 +144,21 @@ const Footer = () => {
             "All for God's glory"
           </p>
         </div>
+        
+        {/* Credit */}
+        <div className="mt-6 text-center">
+          <p className="text-white/30 text-sm">
+            Made by{" "}
+            <a 
+              href="https://charlottesoftwareengineering.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-[#D97706] hover:text-[#D97706]/80 transition-colors"
+            >
+              Charlotte
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
