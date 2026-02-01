@@ -1,0 +1,97 @@
+{
+  "design_strategy": {
+    "theme": "light",
+    "archetype": "Organic & Earthy",
+    "emotional_tone": "Trustworthy, Skilled, Faithful, Warm",
+    "visual_style": "Architectural Precision meets Family Warmth"
+  },
+  "typography": {
+    "primary_font": "Playfair Display",
+    "secondary_font": "Manrope",
+    "font_weights": {
+      "heading": "700",
+      "body": "400",
+      "bold": "600"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl tracking-tight leading-tight",
+      "h2": "text-4xl md:text-5xl tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body": "text-base md:text-lg leading-relaxed",
+      "caption": "text-sm tracking-widest uppercase"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#0F172A",
+      "secondary": "#B45309",
+      "accent": "#D97706",
+      "background": "#FAFAF9",
+      "surface": "#FFFFFF",
+      "text_primary": "#1C1917",
+      "text_secondary": "#57534E",
+      "border": "#E7E5E4"
+    },
+    "usage": {
+      "primary": "Headings, Strong borders, Footer background",
+      "secondary": "Subheadings, Icons, Highlights",
+      "accent": "Primary CTAs (Text to get started), Key highlights",
+      "background": "Page background (Warm Stone)",
+      "surface": "Cards, Sections (White)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode A for Services)",
+    "spacing": "Generous (p-8 to p-24)",
+    "container": "max-w-7xl mx-auto px-4 md:px-8",
+    "alignment": "Asymmetric headers, Grid-aligned content"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-accent text-white hover:bg-accent/90 rounded-md px-8 py-4 font-bold shadow-lg transition-transform hover:-translate-y-1",
+      "secondary": "border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-md px-8 py-4 font-bold transition-colors",
+      "cta_special": "Fixed/Sticky 'Text to get started' button on mobile"
+    },
+    "cards": {
+      "service_card": "bg-white p-8 border border-border hover:border-secondary/50 transition-all duration-300 hover:shadow-xl group relative overflow-hidden",
+      "testimonial_card": "bg-stone-100 p-8 rounded-xl relative"
+    },
+    "navigation": {
+      "style": "Floating glassmorphism or Solid White with bottom border",
+      "links": "font-medium hover:text-secondary transition-colors"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle grain overlay on backgrounds",
+    "decorations": "Architectural line drawings (SVG) in background, 'Light' leaks (gradients) for faith aspect",
+    "motion": "Fade-in up for sections, Staggered reveal for lists, Parallax on hero image"
+  },
+  "image_urls": {
+    "hero": "https://images.unsplash.com/photo-1762813384339-c526d5533976",
+    "services": {
+      "bathroom": "https://images.unsplash.com/photo-1735538497321-fcdb11d4b9f7",
+      "flooring": "https://images.unsplash.com/photo-1704167674713-649193461719",
+      "framing": "https://images.unsplash.com/photo-1768321901750-f7b96d774456",
+      "decks": "https://images.unsplash.com/photo-1735132259290-c0879f39ef2c"
+    },
+    "about": "https://images.unsplash.com/photo-1704167674713-649193461719",
+    "testimonials": "https://images.unsplash.com/photo-1735132259290-c0879f39ef2c"
+  },
+  "instructions_to_main_agent": [
+    "Use 'Playfair Display' from Google Fonts for all Headings to give a 'Faith/Family' warmth.",
+    "Use 'Manrope' for body text to keep it modern and legible.",
+    "Implement a 'Text to get started' CTA that is always visible or very prominent.",
+    "Use the 'Bento Grid' layout for the Services section.",
+    "Ensure the 'About Erik' section feels personal - use the 'working hands' image if no portrait is available.",
+    "Do NOT use generic blue/white construction themes. Use the Warm Stone/Navy/Amber palette.",
+    "Add a subtle 'grain' texture to the background to make it feel physical/grounded.",
+    "For the 'Faith' aspect, use light and whitespace, not religious icons. Let the 'Jireh' name and mission statement do the work."
+  ],
+  "universal_guidelines": [
+    "Avoid generic centered layouts.",
+    "Use 2-3x more spacing than typical.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts.",
+    "Ensure all interactive elements have data-testid attributes."
+  ]
+}
