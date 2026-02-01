@@ -170,3 +170,14 @@ html {
     display: contents !important;
   }
 }
+
+/* Hide Emergent badge */
+[data-emergent-badge],
+.emergent-badge,
+div[style*="Made with Emergent"],
+a[href*="emergent"] img,
+div:has(> a[href*="emergentagent"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
