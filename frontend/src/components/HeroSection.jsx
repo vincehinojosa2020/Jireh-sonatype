@@ -1,4 +1,4 @@
-import { Phone, ChevronDown, MapPin, Building2, Users, Award } from "lucide-react";
+import { Phone, ChevronDown, MapPin, Building2, Users, Award, Calendar, CreditCard } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -68,12 +68,14 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up opacity-0 animation-delay-500">
             <a
-              href="sms:2109809174"
+              href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+              target="_blank"
+              rel="noopener noreferrer"
               data-testid="hero-cta-primary"
               className="inline-flex items-center justify-center gap-3 bg-[#D97706] hover:bg-[#B45309] text-white px-8 py-4 rounded-md font-bold text-lg transition-all hover:-translate-y-1 shadow-xl"
             >
               <Phone className="w-5 h-5" />
-              Start Your Project
+              Book a Consultation
             </a>
             <a
               href="#projects"
@@ -92,7 +94,7 @@ const HeroSection = () => {
             </a>
             <div className="flex items-center gap-2 text-white/70">
               <MapPin className="w-4 h-4" />
-              <span>San Antonio • Schertz to Cedar Park</span>
+              <span>San Antonio, Texas</span>
             </div>
           </div>
         </div>
