@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Phone, X } from "lucide-react";
+import { Calendar, X } from "lucide-react";
 
 const FloatingCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,12 +31,14 @@ const FloatingCTA = () => {
 
       {/* Main CTA */}
       <a
-        href="sms:2109809174"
+        href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+        target="_blank"
+        rel="noopener noreferrer"
         className="floating-cta flex items-center gap-3 bg-[#D97706] hover:bg-[#B45309] text-white px-6 py-4 rounded-full font-bold shadow-2xl transition-all hover:scale-105"
       >
-        <Phone className="w-5 h-5" />
-        <span className="hidden sm:inline">Text to Get Started</span>
-        <span className="sm:hidden">(210) 980-9174</span>
+        <Calendar className="w-5 h-5" />
+        <span className="hidden sm:inline">Book Consultation</span>
+        <span className="sm:hidden">Book Now</span>
       </a>
     </div>
   );
