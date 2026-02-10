@@ -169,7 +169,9 @@ const ServicesSection = () => {
             </p>
           </div>
           <a
-            href="sms:2109809174"
+            href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+            target="_blank"
+            rel="noopener noreferrer"
             data-testid="services-cta"
             className="inline-flex items-center gap-3 bg-[#D97706] hover:bg-[#B45309] text-white px-8 py-4 rounded-md font-bold transition-all hover:-translate-y-1 whitespace-nowrap"
           >
