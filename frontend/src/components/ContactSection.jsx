@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle, Building2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle, Building2, Calendar, CreditCard } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -139,10 +139,34 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-white/50 text-sm mb-1">Service Area</p>
-                  <p className="text-white font-bold">San Antonio & Central Texas</p>
-                  <p className="text-white/60 text-sm">Schertz • New Braunfels • Austin • Cedar Park</p>
+                  <p className="text-white font-bold">San Antonio, Texas</p>
+                  <p className="text-white/60 text-sm">Greater San Antonio Metro Area</p>
                 </div>
               </div>
+            </div>
+
+            {/* Additional CTAs */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="contact-calendly"
+                className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-bold transition-all"
+              >
+                <Calendar className="w-5 h-5" />
+                Book a Consultation
+              </a>
+              <a
+                href="https://buy.stripe.com/test_14k00M8lB5Ov8Vy000"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="contact-payment"
+                className="flex items-center justify-center gap-3 bg-[#635BFF] hover:bg-[#5046E5] text-white px-6 py-4 rounded-xl font-bold transition-all"
+              >
+                <CreditCard className="w-5 h-5" />
+                Make a Payment
+              </a>
             </div>
           </div>
 
