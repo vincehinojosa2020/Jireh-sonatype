@@ -155,52 +155,40 @@ async def get_services():
     return {
         "services": [
             {
-                "id": "bathroom",
-                "title": "Bathroom Remodel",
-                "description": "Transform your bathroom into a relaxing retreat with custom tile, fixtures, and cabinetry.",
+                "id": "churches",
+                "title": "Church Construction",
+                "description": "Sacred spaces built with purpose. We construct houses of worship that inspire congregations and serve communities for generations.",
+                "image": "https://images.unsplash.com/photo-1767692243999-9db180abfa62?w=800"
+            },
+            {
+                "id": "residential",
+                "title": "Residential Construction",
+                "description": "Custom homes built to your vision. From foundation to finish, we create quality residences that families are proud to call home.",
+                "image": "https://images.unsplash.com/photo-1762374974129-f9266d9c4efc?w=800"
+            },
+            {
+                "id": "commercial",
+                "title": "Commercial Buildings",
+                "description": "Functional commercial spaces that drive business success. Office buildings, retail centers, and mixed-use developments.",
+                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800"
+            },
+            {
+                "id": "restaurants",
+                "title": "Restaurant Build-Outs",
+                "description": "Turn your culinary vision into reality. Complete restaurant construction and build-outs from concept to grand opening.",
+                "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800"
+            },
+            {
+                "id": "remodeling",
+                "title": "Renovations & Remodeling",
+                "description": "Transform existing spaces into something extraordinary. Kitchens, bathrooms, and complete interior renovations.",
                 "image": "https://images.unsplash.com/photo-1758448018619-4cbe2250b9ad?w=800"
             },
             {
-                "id": "flooring",
-                "title": "Flooring",
-                "description": "From hardwood to luxury vinyl, we install beautiful, durable floors that last.",
-                "image": "https://images.unsplash.com/photo-1622653416662-5a74e75717db?w=800"
-            },
-            {
-                "id": "framing",
-                "title": "Framing (Metal & Wood)",
-                "description": "Professional metal and wood framing for new construction and renovations.",
-                "image": "https://images.unsplash.com/photo-1618373012585-ae012fc350e8?w=800"
-            },
-            {
-                "id": "drywall",
-                "title": "Drywall",
-                "description": "Expert drywall installation, repair, and finishing for flawless walls.",
-                "image": "https://images.unsplash.com/photo-1768839725085-829e6ac7ac26?w=800"
-            },
-            {
-                "id": "painting",
-                "title": "Interior & Exterior Painting",
-                "description": "Professional painting services that bring your vision to life with precision.",
-                "image": "https://images.unsplash.com/photo-1721274503578-80116d19ce9d?w=800"
-            },
-            {
                 "id": "outdoor",
-                "title": "Decks, Patios & Pergolas",
-                "description": "Create your dream outdoor living space with custom decks, patios, and pergolas.",
+                "title": "Outdoor Living Spaces",
+                "description": "Extend your living space outdoors. Custom decks, patios, pergolas, and outdoor kitchens built to last.",
                 "image": "https://images.unsplash.com/photo-1760552268175-431696421106?w=800"
-            },
-            {
-                "id": "carpentry",
-                "title": "Carpentry & Trim Work",
-                "description": "Fine carpentry and trim work that adds character and value to your home.",
-                "image": "https://images.unsplash.com/photo-1601066675934-9657b64c0a4e?w=800"
-            },
-            {
-                "id": "siding",
-                "title": "Siding & Windows",
-                "description": "Protect and beautify your home with quality siding and window installation.",
-                "image": "https://images.unsplash.com/photo-1748908271592-d9d5690b288b?w=800"
             }
         ]
     }
