@@ -40,7 +40,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/60 leading-relaxed mb-6">
-              Full-service general contractor serving San Antonio and Central Texas. 
+              Full-service general contractor serving San Antonio and the Greater San Antonio Metro. 
               From churches to custom homes — we build what matters.
             </p>
             <div className="flex gap-4">
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin className="w-5 h-5 text-[#D97706] flex-shrink-0 mt-0.5" />
-                <span>San Antonio & Central Texas<br />Schertz to Cedar Park</span>
+                <span>San Antonio, Texas<br />Greater San Antonio Metro</span>
               </li>
             </ul>
           </div>
