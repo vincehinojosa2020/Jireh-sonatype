@@ -64,12 +64,14 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="sms:2109809174"
+              href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+              target="_blank"
+              rel="noopener noreferrer"
               data-testid="nav-cta"
               className="flex items-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white px-5 py-2.5 rounded-md font-semibold text-sm transition-all hover:-translate-y-0.5 shadow-lg"
             >
               <Phone className="w-4 h-4" />
-              Start Your Project
+              Book Consultation
             </a>
           </div>
 
@@ -101,11 +103,13 @@ const Navbar = () => {
                 </a>
               ))}
               <a
-                href="sms:2109809174"
+                href="https://calendly.com/vince-charlottesoftwareengineering/new-meeting-1"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-[#D97706] text-white px-5 py-3 rounded-md font-semibold mt-4"
               >
                 <Phone className="w-4 h-4" />
-                Start Your Project
+                Book Consultation
               </a>
             </nav>
           </div>
