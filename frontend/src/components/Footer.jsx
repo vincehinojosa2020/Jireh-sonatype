@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin, Building2 } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,12 +12,12 @@ const Footer = () => {
   ];
 
   const services = [
-    "Bathroom Remodel",
-    "Flooring",
-    "Drywall",
-    "Painting",
-    "Decks & Patios",
-    "Carpentry",
+    "Church Construction",
+    "Commercial Buildings",
+    "Custom Homes",
+    "Restaurant Build-Outs",
+    "Renovations",
+    "Outdoor Living",
   ];
 
   return (
@@ -28,20 +28,20 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-[#D97706] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl font-['Playfair_Display']">J</span>
+                <Building2 className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="font-['Playfair_Display'] font-bold text-white text-lg">
                   Jireh
                 </h3>
                 <p className="text-white/50 text-xs tracking-widest uppercase">
-                  Remodeling & Construction
+                  General Contractor
                 </p>
               </div>
             </div>
             <p className="text-white/60 leading-relaxed mb-6">
-              Family-owned business serving San Antonio and Central Texas. 
-              Quality craftsmanship rooted in faith.
+              Full-service general contractor serving San Antonio and Central Texas. 
+              From churches to custom homes — we build what matters.
             </p>
             <div className="flex gap-4">
               <a
@@ -111,7 +111,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="sms:2109809174"
+                  href="tel:2109809174"
                   className="flex items-center gap-3 text-white/60 hover:text-[#D97706] transition-colors"
                 >
                   <Phone className="w-5 h-5 text-[#D97706]" />
@@ -129,7 +129,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-white/60">
                 <MapPin className="w-5 h-5 text-[#D97706] flex-shrink-0 mt-0.5" />
-                <span>San Antonio, TX<br />Schertz to Cedar Park</span>
+                <span>San Antonio & Central Texas<br />Schertz to Cedar Park</span>
               </li>
             </ul>
           </div>
@@ -141,7 +141,7 @@ const Footer = () => {
             © {currentYear} Jireh Remodeling & Construction. All rights reserved.
           </p>
           <p className="text-white/40 text-sm italic">
-            "All for God's glory"
+            "Building with purpose — all for God's glory"
           </p>
         </div>
         

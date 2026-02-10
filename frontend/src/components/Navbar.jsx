@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Phone, Building2 } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,15 +32,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" data-testid="logo" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#0F172A] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl font-['Playfair_Display']">J</span>
+            <div className="w-12 h-12 bg-[#D97706] rounded-lg flex items-center justify-center">
+              <Building2 className="w-6 h-6 text-white" />
             </div>
             <div className="hidden sm:block">
               <h1 className={`font-['Playfair_Display'] font-bold text-lg leading-tight ${isScrolled ? 'text-[#0F172A]' : 'text-white'}`}>
-                Jireh
+                Jireh Construction
               </h1>
               <p className={`text-xs tracking-widest uppercase ${isScrolled ? 'text-[#57534E]' : 'text-white/80'}`}>
-                Remodeling & Construction
+                General Contractor
               </p>
             </div>
           </a>
@@ -70,7 +69,7 @@ const Navbar = () => {
               className="flex items-center gap-2 bg-[#D97706] hover:bg-[#B45309] text-white px-5 py-2.5 rounded-md font-semibold text-sm transition-all hover:-translate-y-0.5 shadow-lg"
             >
               <Phone className="w-4 h-4" />
-              Text to Get Started
+              Start Your Project
             </a>
           </div>
 
@@ -106,7 +105,7 @@ const Navbar = () => {
                 className="flex items-center justify-center gap-2 bg-[#D97706] text-white px-5 py-3 rounded-md font-semibold mt-4"
               >
                 <Phone className="w-4 h-4" />
-                Text to Get Started
+                Start Your Project
               </a>
             </nav>
           </div>

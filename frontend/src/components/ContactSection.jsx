@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle, Building2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,17 +17,17 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-const services = [
+const projectTypes = [
+  "Church Construction",
+  "Commercial Building",
+  "Restaurant Build-Out",
+  "Custom Home",
+  "Home Renovation",
   "Bathroom Remodel",
-  "Flooring",
-  "Framing (Metal & Wood)",
-  "Drywall",
+  "Kitchen Remodel",
+  "Outdoor Living Space",
   "Interior Painting",
   "Exterior Painting",
-  "Decks & Patios",
-  "Pergolas",
-  "Carpentry & Trim Work",
-  "Siding & Windows",
   "Other"
 ];
 
@@ -57,7 +57,7 @@ const ContactSection = () => {
     try {
       await axios.post(`${API}/quote`, formData);
       setIsSubmitted(true);
-      toast.success("Quote request sent successfully! We'll be in touch soon.");
+      toast.success("Project inquiry sent! We'll be in touch within 24 hours.");
       setFormData({
         name: "",
         email: "",
@@ -67,7 +67,7 @@ const ContactSection = () => {
       });
     } catch (error) {
       console.error("Error submitting quote:", error);
-      toast.error("Something went wrong. Please try again or text us directly.");
+      toast.error("Something went wrong. Please try again or call us directly.");
     } finally {
       setIsSubmitting(false);
     }
@@ -84,31 +84,37 @@ const ContactSection = () => {
           {/* Left Side - Info */}
           <div>
             <p className="text-[#D97706] font-semibold tracking-widest uppercase text-sm mb-4">
-              Get a Quote
+              Start Your Project
             </p>
             <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-white mb-6">
-              Let's Build Something<br />
-              <span className="text-[#D97706]">Amazing Together</span>
+              Let's Build<br />
+              <span className="text-[#D97706]">Something Great</span>
             </h2>
             <div className="section-divider mb-8" />
             
+            <p className="text-white/70 text-lg leading-relaxed mb-6">
+              Whether you're planning a new church, building your dream home, or opening 
+              a restaurant — we're ready to make it happen. Reach out and let's discuss your vision.
+            </p>
+
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Ready to start your project? Fill out the form and I'll get back to you 
-              as soon as possible. Or text me directly for a faster response!
+              <span className="text-white font-semibold">No project is too big or too small.</span> From 
+              major construction to renovations and remodeling, we bring the same commitment 
+              to excellence on every job.
             </p>
 
             {/* Contact Info Cards */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <a
                 href="sms:2109809174"
                 data-testid="contact-phone"
-                className="flex items-center gap-5 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors group"
+                className="flex items-center gap-5 bg-[#D97706] hover:bg-[#B45309] p-5 rounded-xl transition-colors group"
               >
-                <div className="w-14 h-14 bg-[#D97706] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white/50 text-sm mb-1">Text to Get Started</p>
+                  <p className="text-white/80 text-sm mb-1">Call or Text Us</p>
                   <p className="text-white font-bold text-xl">(210) 980-9174</p>
                 </div>
               </a>
@@ -118,8 +124,8 @@ const ContactSection = () => {
                 data-testid="contact-email"
                 className="flex items-center gap-5 bg-white/5 hover:bg-white/10 p-5 rounded-xl transition-colors group"
               >
-                <div className="w-14 h-14 bg-[#B45309] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Mail className="w-6 h-6 text-[#D97706]" />
                 </div>
                 <div>
                   <p className="text-white/50 text-sm mb-1">Email Us</p>
@@ -128,12 +134,13 @@ const ContactSection = () => {
               </a>
 
               <div className="flex items-center gap-5 bg-white/5 p-5 rounded-xl">
-                <div className="w-14 h-14 bg-[#0F172A] border border-white/20 rounded-xl flex items-center justify-center">
+                <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-[#D97706]" />
                 </div>
                 <div>
                   <p className="text-white/50 text-sm mb-1">Service Area</p>
-                  <p className="text-white font-bold">San Antonio • Schertz to Cedar Park</p>
+                  <p className="text-white font-bold">San Antonio & Central Texas</p>
+                  <p className="text-white/60 text-sm">Schertz • New Braunfels • Austin • Cedar Park</p>
                 </div>
               </div>
             </div>
@@ -150,22 +157,28 @@ const ContactSection = () => {
                   Thank You!
                 </h3>
                 <p className="text-[#57534E] mb-6">
-                  Your quote request has been received. I'll get back to you as soon as possible.
+                  Your project inquiry has been received. We'll review the details and 
+                  get back to you within 24 hours.
                 </p>
                 <Button
                   onClick={() => setIsSubmitted(false)}
                   className="bg-[#D97706] hover:bg-[#B45309] text-white"
                 >
-                  Submit Another Request
+                  Submit Another Inquiry
                 </Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} data-testid="quote-form" className="space-y-6">
-                <div className="text-center mb-8">
-                  <h3 className="font-['Playfair_Display'] text-2xl font-bold text-[#0F172A] mb-2">
-                    Request a Free Quote
-                  </h3>
-                  <p className="text-[#57534E]">Fair prices, guaranteed quality</p>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-[#D97706]/10 rounded-lg flex items-center justify-center">
+                    <Building2 className="w-5 h-5 text-[#D97706]" />
+                  </div>
+                  <div>
+                    <h3 className="font-['Playfair_Display'] text-xl font-bold text-[#0F172A]">
+                      Project Inquiry
+                    </h3>
+                    <p className="text-[#57534E] text-sm">Tell us about your vision</p>
+                  </div>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -214,15 +227,15 @@ const ContactSection = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="service">Service Needed *</Label>
+                    <Label htmlFor="service">Project Type *</Label>
                     <Select onValueChange={handleServiceChange} value={formData.service_type}>
                       <SelectTrigger data-testid="select-service" className="border-[#E7E5E4]">
-                        <SelectValue placeholder="Select a service" />
+                        <SelectValue placeholder="Select project type" />
                       </SelectTrigger>
                       <SelectContent>
-                        {services.map((service) => (
-                          <SelectItem key={service} value={service}>
-                            {service}
+                        {projectTypes.map((type) => (
+                          <SelectItem key={type} value={type}>
+                            {type}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -236,11 +249,11 @@ const ContactSection = () => {
                     id="message"
                     name="message"
                     data-testid="input-message"
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about your project — scope, timeline, location, budget range, etc."
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={4}
+                    rows={5}
                     className="border-[#E7E5E4] focus:border-[#D97706] focus:ring-[#D97706] resize-none"
                   />
                 </div>
@@ -256,13 +269,13 @@ const ContactSection = () => {
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Send Quote Request
+                      Submit Project Inquiry
                     </>
                   )}
                 </Button>
 
                 <p className="text-center text-sm text-[#57534E]">
-                  Or text us directly at{" "}
+                  Prefer to talk? Call or text us at{" "}
                   <a href="sms:2109809174" className="text-[#D97706] font-semibold hover:underline">
                     (210) 980-9174
                   </a>
