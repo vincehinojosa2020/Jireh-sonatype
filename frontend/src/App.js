@@ -3,6 +3,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import HomePage from "@/pages/HomePage";
+import PrintPage from "@/pages/PrintPage";
 
 function App() {
   // Remove Emergent badge
@@ -11,7 +12,6 @@ function App() {
       const badges = document.querySelectorAll('a[href*="emergent"], div[class*="emergent"], [data-emergent]');
       badges.forEach(el => el.remove());
       
-      // Also check for fixed position elements in bottom right
       document.querySelectorAll('body > div').forEach(el => {
         const style = window.getComputedStyle(el);
         if (style.position === 'fixed' && style.bottom && style.right) {
@@ -32,6 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/print" element={<PrintPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-right" richColors />
