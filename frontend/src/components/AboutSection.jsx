@@ -1,37 +1,28 @@
-import { CheckCircle, Heart, Star, Clock, Users, Shield, Target, Handshake } from "lucide-react";
+import { CheckCircle, Heart, Shield, Target, Handshake, Award } from "lucide-react";
+
+const LOGO_URL = "https://customer-assets.emergentagent.com/job_9d1df51c-b9c0-4f50-81ff-e54a305e2b3d/artifacts/456wlf9p_FullLogo_Transparent_NoBuffer.png";
 
 const values = [
   {
     icon: Heart,
     title: "Faith-Driven",
-    description: "Our work is rooted in faith and guided by purpose. We build not just structures, but legacies."
+    description: "Our work is rooted in faith. We build not just structures, but legacies."
   },
   {
     icon: Shield,
     title: "Integrity First",
-    description: "Honest communication, transparent pricing, and doing what's right — every time, on every project."
+    description: "Honest communication, fair pricing, and doing what's right — every time."
   },
   {
     icon: Target,
     title: "Excellence",
-    description: "We don't settle for 'good enough.' Every detail matters, and quality is non-negotiable."
+    description: "We don't settle for 'good enough.' Quality is non-negotiable."
   },
   {
     icon: Handshake,
     title: "Partnership",
-    description: "We succeed when you succeed. Your vision drives our work, and collaboration fuels results."
+    description: "Your vision drives our work. We succeed when you succeed."
   }
-];
-
-const capabilities = [
-  "Ground-up Construction",
-  "Commercial Build-outs",
-  "Church Construction",
-  "Restaurant Construction",
-  "Custom Homes",
-  "Renovations & Remodeling",
-  "Project Management",
-  "Design-Build Services"
 ];
 
 const AboutSection = () => {
@@ -39,120 +30,89 @@ const AboutSection = () => {
     <section
       id="about"
       data-testid="about-section"
-      className="py-24 md:py-32 bg-[#FAFAF9]"
+      className="py-24 md:py-32 bg-gray-50"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
           <div className="relative">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+            <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#0A4F60] flex items-center justify-center p-12">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-                alt="Construction site representing our work"
-                className="w-full h-full object-cover"
+                src={LOGO_URL}
+                alt="Jireh Remodeling & Construction"
+                className="w-full max-w-md"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/40 to-transparent" />
+              {/* Decorative */}
+              <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[#F5A623]/20 rounded-bl-[100px]" />
             </div>
             
             {/* Floating card */}
-            <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-2xl max-w-xs hidden md:block">
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-16 h-16 bg-[#D97706] rounded-xl flex items-center justify-center">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <p className="font-['Playfair_Display'] font-bold text-[#0F172A] text-lg">Expert Team</p>
-                  <p className="text-[#57534E] text-sm">Ready to Build</p>
-                </div>
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-2xl hidden md:flex items-center gap-4">
+              <div className="w-16 h-16 bg-[#F5A623] rounded-xl flex items-center justify-center">
+                <Award className="w-8 h-8 text-white" />
               </div>
-            </div>
-
-            {/* Experience badge */}
-            <div className="absolute -top-6 -left-6 bg-[#0F172A] p-4 rounded-xl shadow-xl hidden md:block">
-              <p className="text-[#D97706] font-bold text-3xl">10+</p>
-              <p className="text-white text-sm">Years Experience</p>
+              <div>
+                <p className="font-bold text-[#0A4F60] text-2xl">10+</p>
+                <p className="text-gray-500 text-sm">Years Experience</p>
+              </div>
             </div>
           </div>
 
           {/* Content Side */}
           <div>
-            <p className="text-[#D97706] font-semibold tracking-widest uppercase text-sm mb-4">
-              About Jireh Construction
+            <p className="text-[#F5A623] font-semibold tracking-widest uppercase text-sm mb-4">
+              About Us
             </p>
-            <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-[#0F172A] mb-6">
-              Building Tomorrow,<br />Together
+            <h2 className="font-['Playfair_Display'] text-4xl md:text-5xl font-bold text-[#0A4F60] mb-6">
+              Meet Erik
             </h2>
-            <div className="section-divider mb-8" />
             
-            <div className="space-y-6 text-[#57534E] text-lg leading-relaxed">
+            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                <span className="text-[#0F172A] font-semibold">Jireh Remodeling & Construction</span> is 
-                a full-service general contractor serving San Antonio and Central Texas. Founded on 
-                faith and built on excellence, we tackle projects of every scale.
+                I'm <span className="text-[#0A4F60] font-semibold">Erik Camacho</span>, 
+                founder of Jireh Remodeling & Construction. We're a family-owned business 
+                serving San Antonio, and everything we do is rooted in our faith.
               </p>
               <p>
-                From custom homes and church construction to restaurant build-outs and commercial 
-                renovations — our experienced team brings vision to reality. We believe that great 
-                construction isn't just about buildings; it's about building <em>relationships</em> and 
-                serving <em>communities</em>.
+                God blessed me with over a decade of experience in construction and remodeling. 
+                Now I use those gifts to help families create spaces they love — at prices that 
+                are <span className="text-[#F5A623] font-semibold">30% less than the big box stores</span>.
               </p>
               <p>
-                Whether you're a congregation planning a new sanctuary, a family building your dream 
-                home, or an entrepreneur opening your first restaurant — we have the expertise, the 
-                team, and the commitment to deliver.
+                Whether it's a kitchen remodel, bathroom renovation, or building a church for 
+                your congregation — I approach every job with excellence, honesty, and a servant's heart.
               </p>
-            </div>
-
-            {/* Capabilities */}
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {capabilities.map((cap) => (
-                <div key={cap} className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-[#D97706] flex-shrink-0" />
-                  <span className="text-[#1C1917] text-sm font-medium">{cap}</span>
-                </div>
-              ))}
             </div>
 
             {/* Quote */}
-            <blockquote className="mt-10 pl-6 border-l-4 border-[#D97706]">
-              <p className="font-['Playfair_Display'] text-xl text-[#0F172A] italic">
-                "We don't just build structures — we build trust, relationships, and projects that 
-                serve communities for generations."
+            <blockquote className="mt-8 pl-6 border-l-4 border-[#F5A623]">
+              <p className="font-['Playfair_Display'] text-xl text-[#0A4F60] italic">
+                "Quality work. Fair prices. Done right."
               </p>
-              <cite className="mt-3 block text-[#57534E] not-italic font-semibold">— Erik, Founder & General Contractor</cite>
+              <cite className="mt-2 block text-gray-500 not-italic">— Erik Camacho, Founder</cite>
             </blockquote>
           </div>
         </div>
 
         {/* Values Grid */}
-        <div className="mt-24">
-          <div className="text-center mb-12">
-            <h3 className="font-['Playfair_Display'] text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-              Our Core Values
-            </h3>
-            <p className="text-[#57534E] max-w-2xl mx-auto">
-              These principles guide every project, every decision, and every relationship we build.
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                data-testid={`value-card-${index}`}
-                className="bg-white p-8 rounded-xl border border-[#E7E5E4] hover:border-[#D97706]/50 hover:shadow-lg transition-all group"
-              >
-                <div className="w-14 h-14 bg-[#D97706]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#D97706] transition-colors">
-                  <value.icon className="w-7 h-7 text-[#D97706] group-hover:text-white transition-colors" />
-                </div>
-                <h4 className="font-['Playfair_Display'] text-xl font-bold text-[#0F172A] mb-3">
-                  {value.title}
-                </h4>
-                <p className="text-[#57534E] leading-relaxed">
-                  {value.description}
-                </p>
+        <div className="mt-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
+            <div
+              key={value.title}
+              data-testid={`value-card-${index}`}
+              className="bg-white p-8 rounded-xl border border-gray-200 hover:border-[#F5A623]/50 hover:shadow-lg transition-all group"
+            >
+              <div className="w-14 h-14 bg-[#0A4F60]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#F5A623]/20 transition-colors">
+                <value.icon className="w-7 h-7 text-[#0A4F60]" />
               </div>
-            ))}
-          </div>
+              <h3 className="font-bold text-xl text-[#0A4F60] mb-3">
+                {value.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {value.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
