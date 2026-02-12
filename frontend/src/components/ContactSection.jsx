@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle, MessageCircle, Calendar, CreditCard, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CheckCircle, MessageCircle, Calendar, CreditCard } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
